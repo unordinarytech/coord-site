@@ -86,7 +86,7 @@ export default function Page3Block() {
                 Claude Code
               </div>
               <div className="p-3">
-                <div className="w-full gap-1 h-fit py-0.5 font-mono text-[clamp(10px,1.8vw,15px)] text-white/60 bg-white/20 leading-[1.3] flex items-center">
+                <div className="w-full gap-1 h-fit py-1.5 font-mono text-[clamp(10px,1.8vw,15px)] text-white/60 bg-white/20 leading-[1.3] flex items-center">
                   &gt; add retry handling
                 </div>
                 <div className="w-full mt-1 text-white/70 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3] flex items-center gap-1">
@@ -96,7 +96,7 @@ export default function Page3Block() {
                   <span className="shrink-0 text-[0.5em] mt-[0.55em] leading-none text-white/80">●</span>
                   <span className="ml-1.5">Found retry logic from @ronishrohan</span>
                 </div>
-                <div className="w-full gap-1 mt-1 border-y border-white/30 py-1 text-white/70 flex items-center font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]">
+                <div className="w-full gap-1 mt-1 border-y border-white/30 py-1.5 text-white/70 flex items-center font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]">
                   &gt; <span>extending the existing path</span>
                   <span className="inline-block w-[0.6em] h-[1em] bg-white/80 align-middle animate-[blink_1s_step-end_infinite] ml-px" />
                 </div>
@@ -131,7 +131,7 @@ export default function Page3Block() {
                 OpenAI Codex
               </div>
               <div className="p-3">
-                <div className="w-full gap-1 h-fit py-0.5 font-mono text-[clamp(10px,1.8vw,15px)] text-white/60 bg-white/20 leading-[1.3] flex items-center">
+                <div className="w-full gap-1 h-fit py-1.5 font-mono text-[clamp(10px,1.8vw,15px)] text-white/60 bg-white/20 leading-[1.3] flex items-center">
                   &gt; deploy the new API
                 </div>
                 <div className="w-full mt-1 text-white/70 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3] flex items-center gap-1">
@@ -141,7 +141,7 @@ export default function Page3Block() {
                   <span className="shrink-0 text-[0.5em] mt-[0.55em] leading-none text-white/80">●</span>
                   <span className="ml-1.5">Found rollout notes from @kushagra2503</span>
                 </div>
-                <div className="w-full gap-1 mt-1 border-y border-white/30 py-1 text-white/70 flex items-center font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]">
+                <div className="w-full gap-1 mt-1 bg-white/20 py-1.5 text-white/70 flex items-center font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]">
                   &gt; <span>continuing from those notes</span>
                   <span className="inline-block w-[0.6em] h-[1em] bg-white/80 align-middle animate-[blink_1s_step-end_infinite] ml-px" />
                 </div>

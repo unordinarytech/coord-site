@@ -57,10 +57,10 @@ export default function Page2Block() {
       }
     >
       {/* top-right box */}
-      <div className="absolute top-[12%] p-2 right-[10%] w-[clamp(200px,25vw,400px)] bg-[#007a55]"
+      <div className="absolute top-[12%] w-fit p-2 right-[10%] w-[clamp(200px,25vw,400px)] bg-[#007a55]"
         style={{ aspectRatio: "4 / 0.8" }} >
         <div className="border-y-2 border-white/30 items-center flex text-white/60 font-mono text-[2vw] whitespace-nowrap leading-[1.3] size-full" >
-          &gt; **** YOU CLAUDE CODE</div>
+          &gt; *CUSSES AT AGENT*</div>
       </div>
 
       {/* bottom box */}
