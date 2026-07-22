@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Scene3D />
       <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-10 pb-4 pointer-events-none">
-        <div className="flex items-center gap-3 font-mono text-base font-bold tracking-widest text-[#007a55]">
+        <div className="flex items-center gap-3 font-mono text-base font-bold tracking-tighter text-[#007a55]">
           <svg width="22" height="22" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M24.5 30C24.5 28.6044 24.5 27.9067 24.3278 27.3389C23.94 26.0605 22.9395 25.06 21.6611 24.6722C21.0933 24.5 20.3956 24.5 19 24.5H14C12.6044 24.5 11.9067 24.5 11.3389 24.6722C10.0605 25.06 9.06004 26.0605 8.67224 27.3389C8.5 27.9067 8.5 28.6044 8.5 30" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M8.5 3C8.5 4.3956 8.5 5.0933 8.6722 5.6611C9.06 6.9395 10.0605 7.94 11.3389 8.3278C11.9067 8.5 12.6044 8.5 14 8.5L19 8.5C20.3956 8.5 21.0934 8.5 21.6611 8.3278C22.9396 7.94 23.94 6.9395 24.3278 5.6611C24.5 5.0933 24.5 4.3956 24.5 3" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>

@@ -42,7 +42,7 @@ export default function Page2Block() {
   return (
     <div
       ref={containerRef}
-      className="relative z-10 w-full max-w-6xl px-8 py-24 leading-none select-none"
+      className="relative z-10 w-full h-full flex items-center justify-center px-8 leading-none select-none"
       style={
         {
           "--sc-fg": "#18181b",
@@ -52,17 +52,27 @@ export default function Page2Block() {
         } as React.CSSProperties
       }
     >
-      {LINES.map((line, i) => (
-        <div
-          key={line}
-          data-sc="idle"
-          className={`font-mono text-[clamp(3rem,10vw,8rem)] font-medium tracking-tighter ${
-            i === 0 ? "text-left" : i === 1 ? "text-center" : "text-right"
-          }`}
-        >
-          {line}
-        </div>
-      ))}
+      {/* top-right box */}
+      <div className="absolute top-[12%] right-[10%] w-[clamp(180px,22vw,360px)] bg-[#007a55]"
+           style={{ aspectRatio: "3 / 1" }} />
+
+      {/* bottom box */}
+      <div className="absolute bottom-[15%] left-[8%] w-[clamp(140px,17vw,280px)] bg-[#007a55]"
+           style={{ aspectRatio: "3 / 2" }} />
+
+      <div className="relative z-10 max-w-6xl">
+        {LINES.map((line, i) => (
+          <div
+            key={line}
+            data-sc="idle"
+            className={`font-mono text-[clamp(3rem,10vw,8rem)] font-medium tracking-tighter ${
+              i === 0 ? "text-left" : i === 1 ? "text-center" : "text-right"
+            }`}
+          >
+            {line}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
