@@ -53,33 +53,40 @@ export default function Page2Block() {
       }
     >
       {/* top-right box */}
-      <div className="absolute top-[12%] right-[10%] w-[clamp(200px,25vw,400px)] bg-[#007a55]"
-           style={{ aspectRatio: "3 / 1" }} ></div>
+      <div className="absolute top-[12%] p-2 right-[10%] w-[clamp(200px,25vw,400px)] bg-[#007a55]"
+        style={{ aspectRatio: "4 / 0.8" }} >
+        <div className="border-y-2 border-white/30 items-center flex text-white/60 font-mono text-[2vw] whitespace-nowrap leading-[1.3] size-full" >
+          &gt; F*** YOU CLAUDE CODE </div>
+      </div>
 
       {/* bottom box */}
-      <div className="absolute bottom-[15%] left-[8%] w-[clamp(140px,17vw,280px)] bg-[#007a55]"
-           style={{ aspectRatio: "3 / 2" }} >
+      <div className="absolute bottom-[10%] left-[14%] w-[clamp(220px,24vw,420px)] bg-[#007a55]"
+        style={{ aspectRatio: "3 / 2" }} >
 
-            <div className="absolute inset-0 flex flex-col justify-end p-2.5">
-              <pre className="font-mono text-[6px] leading-none text-white/80 whitespace-pre select-none">
-{`▐▛███▜▌   Claude Code v2.1.217
+        <div className="absolute inset-0 flex flex-col justify-end p-3">
+          <pre className="font-mono mb-auto text-[clamp(10px,1.8vw,15px)] leading-[1.3] text-white/80 whitespace-pre select-none">
+            {` ▐▛███▜▌   Claude Code v2.1.217
 ▝▜█████▛▘  Opus 4.6 (1M) · medium effort
   ▘▘ ▝▝     API Usage Billing`}
-              </pre>
-              <div className="w-full gap-1 mt-1.5 border-t border-white/30 pt-1.5 text-white/60 flex items-center font-mono text-[9px]">
-                &gt; <span>wait its already implemented?</span>
-              </div>
-            </div>
-           </div>
+          </pre>
+          <div className="w-full gap-1 mt-1 h-fit py-0.5 font-mono text-[clamp(10px,1.8vw,15px)] text-white/60 bg-white/20 leading-[1.3] flex items-center" >
+            &gt; implement this pls
+          </div>
+          <div className="w-full mt-1 text-white/60 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]" >that&rsquo;s already implemented by @ronishrohan on github</div>
+          <div className="w-full gap-1 mt-1 border-y border-white/30 py-1 text-white/60 flex items-center font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]">
+            &gt; <span>WAIT its already implemented?</span>
+            <span className="inline-block w-[0.6em] h-[1em] bg-white/80 align-middle animate-[blink_1s_step-end_infinite] ml-px" />
+          </div>
+        </div>
+      </div>
 
       <div className="relative z-10 max-w-6xl">
         {LINES.map((line, i) => (
           <div
             key={line}
             data-sc="idle"
-            className={`font-mono text-[clamp(3rem,10vw,8rem)] font-medium tracking-tighter ${
-              i === 0 ? "text-left" : i === 1 ? "text-center" : "text-right"
-            }`}
+            className={`font-mono text-[clamp(3rem,10vw,8rem)] font-medium tracking-tighter ${i === 0 ? "text-left" : i === 1 ? "text-center" : "text-right"
+              }`}
           >
             {line}
           </div>

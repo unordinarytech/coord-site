@@ -60,6 +60,8 @@ export default function Scene3D() {
     const loader = new GLTFLoader();
     let mixer: THREE.AnimationMixer | null = null;
     let mesh: THREE.Group | null = null;
+    // all 5 objects (original + 4 clones) with scatter targets
+    const actors: { group: THREE.Group; mixer: THREE.AnimationMixer | null; tx: number; ty: number; tscale: number }[] = [];
     let restZ = 5;
 
     loader.load(
@@ -101,9 +103,38 @@ export default function Scene3D() {
           camera.lookAt(0, 0, 0);
         }
 
-        if (gltf.animations?.length) {
-          mixer = new THREE.AnimationMixer(mesh);
-          gltf.animations.forEach((clip) => mixer!.clipAction(clip).play());
+        // page-3: 5 scatter targets (original + 4 clones)
+        const spots = [
+          { x: -1.6, y:  1.2, scale: 0.3 },
+          { x:  1.8, y:  0.9, scale: 0.28 },
+          { x:  1.2, y: -1.4, scale: 0.35 },
+          { x: -1.4, y: -1.1, scale: 0.25 },
+          { x:  0.0, y:  0.0, scale: 0.33 },
+        ];
+
+        // original is actor 0
+        {
+          let cmixer: THREE.AnimationMixer | null = null;
+          if (gltf.animations?.length) {
+            cmixer = new THREE.AnimationMixer(mesh);
+            gltf.animations.forEach((clip) => cmixer!.clipAction(clip).play());
+          }
+          actors.push({ group: mesh, mixer: cmixer, tx: spots[0].x, ty: spots[0].y, tscale: spots[0].scale });
+        }
+
+        // 4 clones
+        for (let i = 1; i < spots.length; i++) {
+          const clone = mesh.clone(true) as THREE.Group;
+          clone.visible = true;
+          clone.rotation.order = "YXZ";
+          clone.position.set(0, 0, 0);
+          scene.add(clone);
+          let cmixer: THREE.AnimationMixer | null = null;
+          if (gltf.animations?.length) {
+            cmixer = new THREE.AnimationMixer(clone);
+            gltf.animations.forEach((clip) => cmixer!.clipAction(clip).play());
+          }
+          actors.push({ group: clone, mixer: cmixer, tx: spots[i].x, ty: spots[i].y, tscale: spots[i].scale });
         }
       },
     );
@@ -134,6 +165,7 @@ export default function Scene3D() {
       requestAnimationFrame(animate);
       const delta = Math.min(clock.getDelta(), 0.1);
       if (mixer) mixer.update(delta);
+      for (const a of actors) { if (a.mixer) a.mixer.update(delta); }
 
       const s = pageMode.current;
 
@@ -202,10 +234,20 @@ export default function Scene3D() {
       rotZ += norm(targetZ - rotZ) * k;
       camera.position.z += (targetCamZ - camera.position.z) * k;
 
-      if (mesh) {
-        mesh.rotation.y = rotY;
-        mesh.rotation.x = rotX;
-        mesh.rotation.z = rotZ;
+      if (actors.length > 0) {
+        // ── page 3+ → scatter all objects from origin to targets ──
+        const split = s >= 2 ? Math.min(1, (s - 2)) : 0;
+
+        for (const a of actors) {
+          a.group.position.set(
+            a.tx * split,
+            a.ty * split,
+            0,
+          );
+          const scale = 1 + (a.tscale - 1) * split;
+          a.group.scale.setScalar(scale);
+          a.group.rotation.set(rotX, rotY, rotZ);
+        }
       }
 
       effect.render(scene, camera);

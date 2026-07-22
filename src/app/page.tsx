@@ -33,20 +33,20 @@ export default function Home() {
           Cooper
         </div>
       </nav>
-      <div ref={snapRef} className="snap-container h-screen w-full overflow-y-scroll snap-y snap-mandatory">
-        <section className="snap-start h-screen flex items-center justify-center shrink-0">
+      <div ref={snapRef} className="snap-container h-dvh w-full overflow-y-scroll snap-y snap-mandatory">
+        <section className="snap-start h-dvh flex items-center justify-center shrink-0">
           <TyperBlock />
         </section>
-        <section className="snap-start h-screen flex items-center justify-center shrink-0">
+        <section className="snap-start h-dvh flex items-center justify-center shrink-0">
           <Page2Block />
         </section>
-        <section className="snap-start h-screen flex items-center justify-center shrink-0">
+        <section className="snap-start h-dvh flex items-center justify-center shrink-0">
           <Page3Block />
         </section>
-        <section className="snap-start h-screen flex items-center justify-center shrink-0">
+        <section className="snap-start h-dvh flex items-center justify-center shrink-0">
           <Page4Block />
         </section>
-        <section className="snap-start h-screen flex items-center justify-center shrink-0">
+        <section className="snap-start h-dvh flex items-center justify-center shrink-0">
           <Page5Block />
         </section>
       </div>

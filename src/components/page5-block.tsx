@@ -55,7 +55,7 @@ export default function Page5Block() {
   return (
     <div
       ref={containerRef}
-      className="relative z-10 w-full h-full bg-[#111111] flex flex-col items-center justify-center gap-4 px-12 md:px-20 leading-none select-none"
+      className="relative z-10 w-full h-full bg-[#111111] flex flex-col items-center justify-center gap-4 px-12 md:px-20 pb-20 leading-none select-none"
     >
       <Scene3DFooter />
       <div
