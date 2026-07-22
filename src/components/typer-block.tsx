@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { ScrambleGroup } from "@/lib/typer/typer";
 
-const LINES = ["Does your", "team use", "agents?"];
+const LINES = ["Your coding", "agents start", "from scratch"];
 
 export default function TyperBlock() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,7 +18,11 @@ export default function TyperBlock() {
     ];
     if (!els.length) return;
 
-    const group = new ScrambleGroup(els, { maxFrame: 90 }, 0.2);
+    const group = new ScrambleGroup(
+      els,
+      { maxFrame: 90, accentWords: new Set(["scratch"]) },
+      0.2,
+    );
     groupRef.current = group;
 
     const io = new IntersectionObserver(

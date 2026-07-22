@@ -28,7 +28,7 @@ export default function Page5Block() {
       els,
       {
         maxFrame: 90,
-        accentWords: new Set(["Cooper", "testers", "contributors"]),
+        accentWords: new Set(["Coord", "early", "testers", "contributors"]),
       },
       0.2,
     );
@@ -63,7 +63,7 @@ export default function Page5Block() {
         className="relative z-10 font-mono text-[clamp(1.8rem,5vw,3.5rem)] font-medium tracking-tighter leading-tight text-white max-w-4xl text-center"
         style={FOOTER_VARS}
       >
-        Want to try Cooper?
+        Help us test Coord.
       </div>
       <div className="opacity-60">
         <div
@@ -71,7 +71,7 @@ export default function Page5Block() {
           className="relative z-10 font-mono text-[clamp(1.8rem,5vw,3.5rem)] font-medium tracking-tighter leading-tight text-white max-w-4xl text-center"
           style={FOOTER_VARS}
         >
-          it&rsquo;s still in development, not public yet.
+          We&rsquo;re still in development.
         </div>
       </div>
       <div
@@ -79,10 +79,10 @@ export default function Page5Block() {
         className="relative z-10 font-mono text-[clamp(1.8rem,5vw,3.5rem)] font-medium tracking-tighter leading-tight text-white max-w-4xl text-center"
         style={FOOTER_VARS}
       >
-        but we&rsquo;re looking for testers and contributors.
+        We&rsquo;re looking for early testers and contributors.
       </div>
       <p className="relative z-10 font-mono text-[clamp(1.8rem,5vw,3.5rem)] font-medium tracking-tighter leading-tight text-[#007a55]">
-        more at{" "}
+        Follow the work at{" "}
         <a href="https://unordinary.software" className="underline underline-offset-4 hover:text-[#009966] transition-colors">
           unordinary.software
         </a>

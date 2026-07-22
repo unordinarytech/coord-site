@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import { ScrambleGroup } from "@/lib/typer/typer";
 
 const LINES = [
-  "That's where Cooper comes in",
-  "it helps your agents talk",
+  "Coord gives agents",
+  "one shared memory",
 ];
 
 export default function Page3Block() {
@@ -26,7 +26,7 @@ export default function Page3Block() {
       els,
       {
         maxFrame: 90,
-        accentWords: new Set(["talk", "memory", "actively", "Cooper"]),
+        accentWords: new Set(["Coord", "shared", "memory"]),
       },
       0.2,
     );
@@ -53,7 +53,7 @@ export default function Page3Block() {
   return (
     <div
       ref={containerRef}
-      className="relative z-10 w-full h-full flex items-center justify-center px-8 leading-none select-none"
+      className="relative z-10 w-full h-full flex items-center justify-center px-4 md:px-8 leading-none select-none"
       style={
         {
           "--sc-fg": "#18181b",
@@ -64,11 +64,11 @@ export default function Page3Block() {
       }
     >
       <div className="relative z-10 max-w-4xl flex flex-col items-center gap-6">
-        {LINES.map((line, i) => (
+        {LINES.map((line) => (
           <div
             key={line}
             data-sc="idle"
-            className="font-mono text-[clamp(2.5rem,7vw,5rem)] font-medium tracking-tighter text-center leading-tight"
+            className="font-mono text-[clamp(1.75rem,7vw,5rem)] font-medium tracking-tighter text-center leading-tight"
           >
             {line}
           </div>
@@ -77,7 +77,7 @@ export default function Page3Block() {
         {/* terminals row */}
         <div className="flex items-center w-full justify-center mt-4">
           {/* left terminal — Claude Code */}
-          <div className="w-[clamp(200px,22vw,380px)] bg-[#D97757] shrink-0">
+          <div className="w-[clamp(132px,22vw,380px)] bg-[#D97757] shrink-0">
             <div className="flex flex-col">
               <div className="w-full px-3 py-1.5 font-mono text-[clamp(9px,1.5vw,13px)] text-white/70 leading-none border-b border-white/20 flex items-center gap-1.5">
                 <svg height="1em" viewBox="0 0 24 24" width="1em" className="shrink-0">
@@ -87,17 +87,17 @@ export default function Page3Block() {
               </div>
               <div className="p-3">
                 <div className="w-full gap-1 h-fit py-0.5 font-mono text-[clamp(10px,1.8vw,15px)] text-white/60 bg-white/20 leading-[1.3] flex items-center">
-                  &gt; implement plan A
+                  &gt; add retry handling
                 </div>
                 <div className="w-full mt-1 text-white/70 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3] flex items-center gap-1">
-                  <span className="text-white">✓</span> Used Cooper Vault
+                  <span className="text-white">✓</span> Checked Coord
                 </div>
                 <div className="w-full mt-1 text-white/70 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3] flex items-start">
                   <span className="shrink-0 text-[0.5em] mt-[0.55em] leading-none text-white/80">●</span>
-                  <span className="ml-1.5">that&rsquo;s already implemented by @kushagra2503 on github</span>
+                  <span className="ml-1.5">Found retry logic from @ronishrohan</span>
                 </div>
                 <div className="w-full gap-1 mt-1 border-y border-white/30 py-1 text-white/70 flex items-center font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]">
-                  &gt; <span>oh i love this so MUCH</span>
+                  &gt; <span>extending the existing path</span>
                   <span className="inline-block w-[0.6em] h-[1em] bg-white/80 align-middle animate-[blink_1s_step-end_infinite] ml-px" />
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function Page3Block() {
           {/* connector */}
           <div className="h-0.5 w-5 bg-[#007a55] shrink-0" />
 
-          {/* cooper hub */}
+          {/* Coord hub */}
           <div className="w-10 h-10 bg-[#007a55] flex items-center justify-center shrink-0">
             <svg width="16" height="16" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24.5 30C24.5 28.6044 24.5 27.9067 24.3278 27.3389C23.94 26.0605 22.9395 25.06 21.6611 24.6722C21.0933 24.5 20.3956 24.5 19 24.5H14C12.6044 24.5 11.9067 24.5 11.3389 24.6722C10.0605 25.06 9.06004 26.0605 8.67224 27.3389C8.5 27.9067 8.5 28.6044 8.5 30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
@@ -122,7 +122,7 @@ export default function Page3Block() {
           <div className="h-0.5 w-5 bg-[#007a55] shrink-0" />
 
           {/* right terminal — OpenAI Codex */}
-          <div className="w-[clamp(200px,22vw,380px)] bg-[#3941FF] shrink-0">
+          <div className="w-[clamp(132px,22vw,380px)] bg-[#3941FF] shrink-0">
             <div className="flex flex-col">
               <div className="w-full px-3 py-1.5 font-mono text-[clamp(9px,1.5vw,13px)] text-white/70 leading-none border-b border-white/20 flex items-center gap-1.5">
                 <svg height="1em" viewBox="0 0 24 24" width="1em" className="shrink-0">
@@ -132,17 +132,17 @@ export default function Page3Block() {
               </div>
               <div className="p-3">
                 <div className="w-full gap-1 h-fit py-0.5 font-mono text-[clamp(10px,1.8vw,15px)] text-white/60 bg-white/20 leading-[1.3] flex items-center">
-                  &gt; deploy the new api
+                  &gt; deploy the new API
                 </div>
                 <div className="w-full mt-1 text-white/70 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3] flex items-center gap-1">
-                  <span className="text-white">✓</span> Used Cooper Vault
+                  <span className="text-white">✓</span> Checked Coord
                 </div>
                 <div className="w-full mt-1 text-white/70 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3] flex items-start">
                   <span className="shrink-0 text-[0.5em] mt-[0.55em] leading-none text-white/80">●</span>
-                  <span className="ml-1.5">pulling context from what @kushagra2503 shipped earlier</span>
+                  <span className="ml-1.5">Found rollout notes from @kushagra2503</span>
                 </div>
                 <div className="w-full gap-1 mt-1 border-y border-white/30 py-1 text-white/70 flex items-center font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]">
-                  &gt; <span>this is actually incredible</span>
+                  &gt; <span>continuing from those notes</span>
                   <span className="inline-block w-[0.6em] h-[1em] bg-white/80 align-middle animate-[blink_1s_step-end_infinite] ml-px" />
                 </div>
               </div>

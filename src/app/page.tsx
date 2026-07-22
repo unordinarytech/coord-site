@@ -30,7 +30,7 @@ export default function Home() {
             <path d="M3 24.5C4.3956 24.5 5.0933 24.5 5.6611 24.3278C6.9395 23.94 7.94 22.9395 8.3278 21.6611C8.5 21.0933 8.5 20.3956 8.5 19L8.5 14C8.5 12.6044 8.5 11.9066 8.3278 11.3389C7.94 10.0604 6.9395 9.06004 5.6611 8.67224C5.0933 8.5 4.3956 8.5 3 8.5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
             <path d="M21 16.5C21 18.9853 18.9853 21 16.5 21C14.0147 21 12 18.9853 12 16.5C12 14.0147 14.0147 12 16.5 12C18.9853 12 21 14.0147 21 16.5Z" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Cooper
+          Coord
         </div>
       </nav>
       <div ref={snapRef} className="snap-container h-dvh w-full overflow-y-scroll snap-y snap-mandatory">

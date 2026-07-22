@@ -69,7 +69,7 @@ export class BlockScramble {
       if (this.accentWords.has(token)) {
         g.className = "w accent-word";
       }
-      for (const ch of token) {
+      for (let i = 0; i < token.length; i++) {
         const span = document.createElement("span");
         span.textContent = "";
         span.className = "c";

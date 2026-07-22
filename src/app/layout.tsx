@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cooper",
-  description: "Cooper dashboard",
+  title: "Coord — Shared memory for coding agents",
+  description:
+    "Coord carries useful team context from one coding agent and task to the next.",
   icons: {
     icon: "/favicon.svg",
   },

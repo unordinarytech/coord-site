@@ -4,8 +4,8 @@ import { useEffect, useRef } from "react";
 import { ScrambleGroup } from "@/lib/typer/typer";
 
 const LINES = [
-  "with a shared view of everything happening",
-  "in real time",
+  "decisions and prior work",
+  "carry into the next task",
 ];
 
 export default function Page4Block() {
@@ -26,7 +26,7 @@ export default function Page4Block() {
       els,
       {
         maxFrame: 90,
-        accentWords: new Set(["shared", "everything", "real", "time"]),
+        accentWords: new Set(["decisions", "work", "next"]),
       },
       0.2,
     );

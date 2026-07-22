@@ -58,14 +58,13 @@ export default function Scene3D() {
     scene.add(rim);
 
     const loader = new GLTFLoader();
-    let mixer: THREE.AnimationMixer | null = null;
     let mesh: THREE.Group | null = null;
     // all 5 objects (original + 4 clones) with scatter targets
     const actors: { group: THREE.Group; mixer: THREE.AnimationMixer | null; tx: number; ty: number; tscale: number }[] = [];
     let restZ = 5;
 
     loader.load(
-      "/cooper.glb",
+      "/coord.glb",
       (gltf) => {
         mesh = gltf.scene;
         scene.add(mesh);
@@ -164,7 +163,6 @@ export default function Scene3D() {
     function animate() {
       requestAnimationFrame(animate);
       const delta = Math.min(clock.getDelta(), 0.1);
-      if (mixer) mixer.update(delta);
       for (const a of actors) { if (a.mixer) a.mixer.update(delta); }
 
       const s = pageMode.current;

@@ -1,6 +1,6 @@
 ---
 version: alpha
-name: Cooper
+name: Coord
 description: Dense, flat, and teal-anchored dashboard UI inspired by the team-channel design system.
 colors:
   background: "oklch(1 0 0)"
@@ -150,9 +150,16 @@ components:
 
 ## Overview
 
-Cooper is a dense, flat dashboard UI. Built to feel like a precision instrument — compact, calm, and quietly competent. No gradients. No heavy shadows. Depth comes from transparency layering and subtle 1px ring outlines on cards instead of box-shadows. The teal-green primary provides the sole moment of color against a monochromatic zinc-neutral backdrop.
+Coord is a dense, flat dashboard UI. Built to feel like a precision instrument — compact, calm, and quietly competent. No gradients. No heavy shadows. Depth comes from transparency layering and subtle 1px ring outlines on cards instead of box-shadows. The teal-green primary provides the sole moment of color against a monochromatic zinc-neutral backdrop.
 
 Mona Sans Variable carries the UI voice; JetBrains Mono handles code, hashes, and technical data. Everything runs at 12px as the default body size — information-dense but legible with relaxed leading.
+
+## Brand language
+
+Visual restraint and verbal restraint reinforce each other. Product copy is
+precise, confident, developer-native, and lightly irreverent; terminal scenes
+can carry more personality than core explanations. Use `BRAND.md` for
+positioning, terminology, claims, humor, and the pre-publish copy checklist.
 
 ## Colors
 

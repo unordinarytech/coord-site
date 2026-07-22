@@ -6,7 +6,7 @@ import { AsciiEffect } from "three/examples/jsm/effects/AsciiEffect.js";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 
-const WORD = "COOPER";
+const WORD = "COORD";
 const BOX_H = 200;
 
 export default function Scene3DFooter() {

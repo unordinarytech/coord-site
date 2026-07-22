@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { ScrambleGroup } from "@/lib/typer/typer";
 
-const LINES = ["then you know", "how out of sync", "it can be"];
+const LINES = ["so your team", "repeats work", "and loses context"];
 
 export default function Page2Block() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,7 +18,11 @@ export default function Page2Block() {
     ];
     if (!els.length) return;
 
-    const group = new ScrambleGroup(els, { maxFrame: 90, accentWords: new Set(["sync"]) }, 0.2);
+    const group = new ScrambleGroup(
+      els,
+      { maxFrame: 90, accentWords: new Set(["repeats", "context"]) },
+      0.2,
+    );
     groupRef.current = group;
 
     const io = new IntersectionObserver(
@@ -56,7 +60,7 @@ export default function Page2Block() {
       <div className="absolute top-[12%] p-2 right-[10%] w-[clamp(200px,25vw,400px)] bg-[#007a55]"
         style={{ aspectRatio: "4 / 0.8" }} >
         <div className="border-y-2 border-white/30 items-center flex text-white/60 font-mono text-[2vw] whitespace-nowrap leading-[1.3] size-full" >
-          &gt; F*** YOU CLAUDE CODE </div>
+          &gt; **** YOU CLAUDE CODE</div>
       </div>
 
       {/* bottom box */}
@@ -70,11 +74,11 @@ export default function Page2Block() {
   ▘▘ ▝▝     API Usage Billing`}
           </pre>
           <div className="w-full gap-1 mt-1 h-fit py-0.5 font-mono text-[clamp(10px,1.8vw,15px)] text-white/60 bg-white/20 leading-[1.3] flex items-center" >
-            &gt; implement this pls
+            &gt; add retry handling
           </div>
-          <div className="w-full mt-1 text-white/60 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]" >that&rsquo;s already implemented by @ronishrohan on github</div>
+          <div className="w-full mt-1 text-white/60 font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]" >I can&rsquo;t find any earlier context for this</div>
           <div className="w-full gap-1 mt-1 border-y border-white/30 py-1 text-white/60 flex items-center font-mono text-[clamp(10px,1.8vw,15px)] leading-[1.3]">
-            &gt; <span>WAIT its already implemented?</span>
+            &gt; <span>we shipped this last week</span>
             <span className="inline-block w-[0.6em] h-[1em] bg-white/80 align-middle animate-[blink_1s_step-end_infinite] ml-px" />
           </div>
         </div>
