@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Coord — Shared memory for coding agents",
+  title: "Coord - Shared memory for coding agents",
   description:
     "Coord carries useful team context from one coding agent and task to the next.",
   icons: {
